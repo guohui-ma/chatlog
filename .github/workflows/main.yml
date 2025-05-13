@@ -24,3 +24,6 @@ jobs:
           git merge upstream/main
           # 推送更新到当前fork仓库
           git push origin main
+        env:
+          # 需要创建有写入权限的PAT并添加到仓库secrets
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
